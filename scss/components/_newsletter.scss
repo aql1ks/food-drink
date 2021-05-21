@@ -1,0 +1,51 @@
+.newsletter {
+    padding: 60px 0;
+    background-color: $background-gray;
+    h3 {
+        margin: 0;
+    }
+    &__description {
+        @include font(18px);
+        color: $color-white;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    form {
+        @include flex-center;
+        flex-wrap: wrap;
+        margin: auto;
+        max-width: 570px;
+        @include mobile(1024px) {
+            label {
+                width: 100%;
+            }
+        }
+        input {
+            @include font(18px);
+            padding: 18px 34px;
+            height: 100%;
+            box-sizing: border-box;
+            background-color: $color-black;
+            border: none;
+            outline: none;
+            color: $color-white;
+            @include mobile(1024px) {
+                width: 100%;
+            }
+        }
+        button {
+            @include font(18px);
+            font-size: 18px;
+            color: $color-black;
+            padding: 18px;
+            background-color: $color-orange;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            @include mobile(1024px) {
+                width: 100%;
+                margin-top: 20px;
+            }
+        }
+    }
+}

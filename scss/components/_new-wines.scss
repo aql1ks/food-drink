@@ -1,0 +1,136 @@
+.new-wines {
+    padding: 220px 0;
+    background-color: $background-gray;
+    @include mobile(1024px) {
+        padding: 50px 0;
+        text-align: center;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__column {
+        border: 10px solid $color-orange;
+        height: 500px;
+        box-sizing: border-box;
+    }
+    .slick-slide {
+        outline: none;
+    }
+    .slick-prev.slick-arrow {
+        position: absolute;
+        left: 0;
+        bottom: 50%;
+        z-index: 2;
+        transform: translateX(-50%);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: $color-white;
+        background-color: #18191a;
+        outline: none;
+        border: none;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+    .slick-next.slick-arrow {
+        position: absolute;
+        right: 0;
+        bottom: 50%;
+        z-index: 2;
+        transform: translateX(50%);
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: $color-white;
+        background-color: #18191a;
+        outline: none;
+        border: none;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+}
+.new-wines-item {
+    margin-top: -100px;
+    @include mobile(1024px) {
+        margin-top: 0;
+    }
+    &__title {
+        font-family: "ChocolateBox";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 74px;
+        line-height: 43px;
+        color: $color-orange;
+        margin: 50px 0 10px;
+    }
+    &__suptitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 170%;
+        letter-spacing: 0.35em;
+        color: $color-white;
+    }
+    &__subtitle {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 36px;
+        line-height: 170%;
+        color: $color-white;
+        margin: 0;
+    }
+    &__description {
+        margin: 52px 0 64px;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 200%;
+        color: $color-white;
+        @include mobile(1024px) {
+            margin: 40px 0 40px;    
+        }
+    }
+    &__button.btn-bordered {
+        margin-left: 64px;
+        @include mobile(1024px) {
+            margin: 20px 0;
+        }
+    }
+    &__img {
+        position: relative;
+        text-align: center;
+        z-index: 1;
+        height: 690px;
+        @include mobile(1024px) {
+            height: 500px;
+        }
+        img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            @include mobile(1024px) {
+                max-width: 150px;
+            }
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 374px;
+            height: 374px;
+            background-color: $color-orange;
+            border-radius: 50%;
+            z-index: -1;
+            @include mobile(1024px) {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+}

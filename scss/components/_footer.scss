@@ -1,0 +1,56 @@
+.footer {
+    padding-top: 130px;
+    @include mobile(1024px) {
+        padding-top: 50px;
+        text-align: center;
+    }
+    &__phone {
+        padding-top: 10px;
+        color: $color-white;
+    }
+    &__email {
+        color: $color-white;
+    }
+    &__address {
+        color: $color-white;
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 90px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    }
+    &-list {
+        &__social {
+            img {
+                max-width: 24px;
+            }
+            display: flex;
+            justify-content: space-between;
+            max-width: 228px;
+        }
+        &__title {
+            font-family: "ChocolateBox";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 24px;
+            line-height: 14px;
+            color: $color-orange;
+        }
+        &__item {
+            margin-bottom: 15px;
+        }
+        &__link {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 24px;
+            color: $color-white;
+        }
+    }
+    &__copy {
+        padding: 20px 0 40px;
+        text-align: center;
+        color: $color-white;
+    }
+}

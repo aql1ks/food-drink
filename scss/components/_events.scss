@@ -1,0 +1,110 @@
+.events {
+    padding: 150px 0;
+    @include mobile(1024px) {
+        padding: 30px 0;
+    }
+    &__row {
+        display: flex !important;
+        background-color: $background-gray;
+        flex-wrap: wrap;
+    }
+    &-item {
+        &__title {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            color: $color-white;
+            margin: 0;
+        }
+        time {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            color: $color-white;
+        }
+        img {
+            height: 100%;
+            @include mobile(1024px) {
+                width: 100%;
+                height: 272px;
+            }
+        }
+        &__description {
+            margin: 45px 0;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 18px;
+            color: $color-white;
+            @include mobile(1024px) {
+                margin: 20px 0;
+            }
+        }
+        &__info {
+            padding: 60px 250px 90px 30px;
+            @include mobile(1024px) {
+                padding: 30px;
+            }
+        }
+        &__link {
+            font-family: "ChocolateBox";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 18px;
+            color: $color-orange;
+            &::before {
+                content: "";
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $color-orange;
+            }
+        }
+    }
+    .slick-prev.slick-arrow,
+    .slick-next.slick-arrow {
+        position: absolute;
+        left: -130px;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 2px solid $color-orange;
+        border-radius: 50%;
+        width: 65px;
+        height: 65px;
+        z-index: 2;
+        font-size: 0;
+        background: transparent url("../img/arrow.svg") no-repeat center;
+        outline: none;
+        cursor: pointer;
+    }
+    .slick-next.slick-arrow {
+        right: -130px;
+        left: auto;
+        transform: translateY(-50%) rotate(180deg);
+    }
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        li {
+            margin-right: 10px;
+            &.slick-active {
+                button {
+                    background-color: $color-orange;
+                    transform: scale(1.2);
+                }
+            }
+        }
+        button {
+            font-size: 0;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            border-radius: 50%;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+    }
+}

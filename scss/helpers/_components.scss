@@ -1,0 +1,79 @@
+.btn-orange {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    color: #1f1f1f;
+    background-color: $color-orange;
+    padding: 22px 48px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-bordered {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 100%;
+    background-color: transparent;
+    color: $color-white;
+    padding: 22px 52px;
+    outline: none;
+    border: 1px solid $color-orange;
+    cursor: pointer;
+}
+
+.col-3 {
+    width: 25%;
+    @include mobile(1024px) {
+        width: 100%;
+    }
+}
+
+.col-6 {
+    width: 50%;
+    @include mobile(1024px) {
+        width: 100%;
+    }
+}
+
+.col-4 {
+    width: 33.33%;
+    @include mobile(1024px) {
+        width: 100%;
+    }
+}
+
+.col-5 {
+    width: 41.67%;
+    @include mobile(1024px) {
+        width: 100%;
+    }
+}
+
+.col-7 {
+    width: 58.33%;
+    @include mobile(1024px) {
+        width: 100%;
+    }
+}
+
+.col-8 {
+    width: 66%;
+    @include mobile(1024px) {
+        width: 100%;
+    }
+}
+
+.section-title {
+    font-family: 'ChocolateBox';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    color: $color-white;
+    text-align: center;
+    span {
+        color: $color-orange;
+    }
+}
